@@ -103,6 +103,7 @@ router.post(
       if (req.files && req.files["content"]) {
         newBook.content = req.files["content"][0].path;
       }
+      console.log('newBook:', newBook);
 
       await newBook.save();
       res.status(200).send(newBook);

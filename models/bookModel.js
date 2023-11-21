@@ -29,8 +29,8 @@ function validateBook(book) {
     title: Joi.string().required(),
     description: Joi.string().required(),
     category: Joi.string().required(),
-    image: Joi.string(),
-    content: Joi.string(),
+    image: Joi.object(),
+    content: Joi.object(),
   });
 
   return schema.validate(book);
